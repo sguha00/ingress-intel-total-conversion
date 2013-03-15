@@ -49,8 +49,11 @@ window.plugin.apList.updatePortalTable = function(side) {
   for(var i = 0; i < plugin.apList.topMaxCount; i++) {
     var portal = plugin.apList.sortedPortals[side][i];
     content += '<tr>'
-            + '<td style="width: 85%; overflow:hidden; white-space:nowrap">'
+            + '<td style="width: 70%; overflow:hidden; white-space:nowrap">'
             + (portal ? plugin.apList.getPortalLink(portal) : '&nbsp;')
+            + '</td>'
+            + '<td>'
+            + (portal ? portal.level : '&nbsp;')
             + '</td>'
             + '<td>'
             + (portal ? plugin.apList.getPortalApText(portal) : '&nbsp;')
@@ -141,6 +144,7 @@ window.plugin.apList.updateSortedPortals = function() {
       // Assign playerApGain and guid to cachedPortal
       cachedPortal.playerApGain = getApGainFunc(portal);
       cachedPortal.guid = value.options.guid;
+      cachedPortal.level = value.options.level;
     }
     plugin.apList.cachedPortals[key] = cachedPortal;
   });
