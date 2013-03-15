@@ -59,7 +59,7 @@ window.plugin.apList.updatePortalTable = function(side) {
                + (portal ? plugin.apList.getPortalDestroyCheckbox(portal) : '&nbsp;')
                + '</td>';
     }
-    content += '<td style="width: ' + (displayEnemy ? '80%' : '85%')
+    content += '<td style="width: ' + (displayEnemy ? '70%' : '75%')
              + '; overflow:hidden; white-space:nowrap">'
              + (portal ? plugin.apList.getPortalLink(portal) : '&nbsp;')
              + '</td>'
